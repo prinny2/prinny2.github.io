@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vinícius Freire, software engineer</title>
+<meta name="description" content="I build software products on my own, from the database schema to the checkout page. Looking for an early engineering job, remote from Brazil.">
+<meta property="og:title" content="Vinícius Freire, software engineer">
+<meta property="og:description" content="LeadBellus, ResonAnza and the rest of what I've built, with the stack and where each one really stands.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Besley:wght@500;700&family=Hanken+Grotesk:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --tile: #f6f8fc;
+  --cobalt: #1b3fa0;
+  --cobalt-deep: #142f7a;
+  --ink: #131d3b;
+  --quiet: #4a5472;
+  --wash: #dfe7f6;
+  --tile-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23f6f8fc'/%3E%3Cg fill='%231b3fa0'%3E%3Ccircle cx='0' cy='0' r='27'/%3E%3Ccircle cx='120' cy='0' r='27'/%3E%3Ccircle cx='0' cy='120' r='27'/%3E%3Ccircle cx='120' cy='120' r='27'/%3E%3Cellipse cx='60' cy='31' rx='9' ry='23'/%3E%3Cellipse cx='60' cy='89' rx='9' ry='23'/%3E%3Cellipse cx='31' cy='60' rx='23' ry='9'/%3E%3Cellipse cx='89' cy='60' rx='23' ry='9'/%3E%3Cpath d='M60 0l6 6-6 6-6-6zM60 120l6-6-6-6-6 6zM0 60l6 6 6-6-6-6zM120 60l-6 6-6-6 6-6z'/%3E%3C/g%3E%3Cg fill='%23f6f8fc'%3E%3Ccircle cx='0' cy='0' r='17'/%3E%3Ccircle cx='120' cy='0' r='17'/%3E%3Ccircle cx='0' cy='120' r='17'/%3E%3Ccircle cx='120' cy='120' r='17'/%3E%3Ccircle cx='60' cy='60' r='12'/%3E%3C/g%3E%3Cg fill='%231b3fa0'%3E%3Ccircle cx='0' cy='0' r='8'/%3E%3Ccircle cx='120' cy='0' r='8'/%3E%3Ccircle cx='0' cy='120' r='8'/%3E%3Ccircle cx='120' cy='120' r='8'/%3E%3Ccircle cx='60' cy='60' r='5'/%3E%3Ccircle cx='38' cy='38' r='4'/%3E%3Ccircle cx='82' cy='38' r='4'/%3E%3Ccircle cx='38' cy='82' r='4'/%3E%3Ccircle cx='82' cy='82' r='4'/%3E%3C/g%3E%3C/svg%3E");
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--tile);
+  color: var(--ink);
+  font: 400 1.0625rem/1.6 "Hanken Grotesk", system-ui, sans-serif;
+}
+.frieze {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 120px;
+  background: var(--tile-url) 0 0 / 120px 120px repeat-y;
+  border-right: 4px solid var(--cobalt);
+}
+main {
+  margin-left: 120px;
+  padding: 72px clamp(24px, 7vw, 96px) 88px;
+  max-width: 900px;
+}
+.measure { max-width: 66ch; }
+h1, h2 {
+  font-family: "Besley", Georgia, serif;
+  font-weight: 700;
+  color: var(--cobalt-deep);
+  letter-spacing: -.01em;
+}
+h1 {
+  font-size: clamp(3rem, 8.5vw, 5.75rem);
+  line-height: 1;
+  margin: 0 0 32px;
+}
+h2 {
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  line-height: 1.15;
+  margin: 0 0 6px;
+}
+h3 {
+  font: 600 1.0625rem/1.4 "Hanken Grotesk", system-ui, sans-serif;
+  margin: 28px 0 6px;
+}
+p { margin: 0 0 16px; }
+.lede {
+  font-size: clamp(1.25rem, 2.6vw, 1.5rem);
+  line-height: 1.45;
+  margin-bottom: 20px;
+}
+a { color: var(--cobalt); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--cobalt-deep); text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--cobalt); outline-offset: 3px; border-radius: 2px; }
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 600;
+}
+section { margin-top: 80px; }
+.site { margin: 0 0 20px; color: var(--quiet); }
+ul.built { margin: 0 0 16px; padding-left: 1.15em; }
+ul.built li { margin-bottom: 8px; }
+ul.built li::marker { color: var(--cobalt); }
+figure { margin: 28px 0; }
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 4px solid var(--cobalt);
+}
+figure.narrow { max-width: 480px; }
+figcaption { margin-top: 8px; font-size: .9375rem; color: var(--quiet); }
+.standing {
+  border-left: 4px solid var(--cobalt);
+  padding: 2px 0 2px 16px;
+  margin: 24px 0 0;
+}
+dl.stack { margin: 16px 0 0; display: grid; grid-template-columns: 11rem 1fr; gap: 8px 20px; }
+dl.stack dt { font-weight: 600; }
+dl.stack dd { margin: 0; }
+.small h3 { margin-top: 24px; }
+footer { margin-top: 80px; padding-top: 24px; border-top: 4px solid var(--cobalt); }
+
+@media (max-width: 760px) {
+  .frieze {
+    position: static;
+    width: auto;
+    height: 72px;
+    background-size: 72px 72px;
+    background-repeat: repeat-x;
+    border-right: 0;
+    border-bottom: 4px solid var(--cobalt);
+  }
+  main { margin-left: 0; padding: 40px 22px 64px; }
+  section { margin-top: 60px; }
+  dl.stack { grid-template-columns: 1fr; gap: 0; }
+  dl.stack dd { margin-bottom: 12px; }
+}
+@media print {
+  .frieze { display: none; }
+  main { margin: 0; padding: 0; }
+}
+</style>
+</head>
+<body>
+<div class="frieze" aria-hidden="true"></div>
+<main>
+
+<header class="measure">
+  <h1>Vinícius Freire</h1>
+  <p class="lede">I build software products on my own, from the database schema to the checkout page. I'm from Belém, at the mouth of the Amazon.</p>
+  <p>I'm looking for an early engineering job at a startup, working remotely from Brazil as a contractor. I'll be in Miami November 7 to 11 and in New York November 12 to 16, and I'd like to meet you for a coffee.</p>
+  <ul class="links">
+    <li><a href="mailto:vpaes.freire02@gmail.com">vpaes.freire02@gmail.com</a></li>
+    <li><a href="vinicius-freire-resume.pdf">Resume (PDF)</a></li>
+    <li><a href="https://www.linkedin.com/in/vin%C3%ADcius-freire-86a16841a/">LinkedIn</a></li>
+    <li><a href="https://github.com/prinny2">GitHub</a></li>
+  </ul>
+</header>
+
+<section class="measure" aria-labelledby="leadbellus">
+  <h2 id="leadbellus">LeadBellus</h2>
+  <p class="site"><a href="https://www.leadbellus.com.br">leadbellus.com.br</a>, <a href="https://github.com/prinny2/leadvitta-app">source on GitHub</a></p>
+  <p>Aesthetic clinics in Brazil sell over WhatsApp. LeadBellus takes a client's message, like "how much is Botox?" or "that's too expensive", and writes three replies in the clinic's tone. Someone on the team picks one and sends it. You can try it on the home page without signing up.</p>
+
+  <figure class="narrow">
+    <img src="leadbellus-replies.png" width="660" height="550" alt="Three generated WhatsApp replies in Portuguese, labeled gentle, consultative and closing.">
+    <figcaption>The live demo, answering "how much is Botox?". The product is in Portuguese.</figcaption>
+  </figure>
+
+  <h3>What I built</h3>
+  <ul class="built">
+    <li>The whole app, alone: Next.js 16, React 19, TypeScript and Firestore.</li>
+    <li>A fallback chain across OpenAI, Claude and Gemini with timeouts and retries, so one provider going down doesn't stop the product.</li>
+    <li>A check after generation that flags what a clinic must not say, like guaranteed results, diagnoses or fixed prices. It still misses things, so I keep adding rules. The latest ones reject replies where the model made up a schedule, a duration or a clinic policy.</li>
+    <li>Stripe subscriptions in live mode, with checkout, a billing portal and idempotent webhooks. Free usage is limited inside a Firestore transaction, so concurrent requests can't get around it.</li>
+    <li>A WhatsApp integration through Z-API with an inbox and auto-reply. It's built, but switched off on the live product, which works by copy and paste so clinics stay in control of what gets sent.</li>
+    <li>400+ Vitest tests with every network call mocked, and a demo mode that runs the whole app with no API keys.</li>
+  </ul>
+  <p class="standing">Where it stands: live at R$97 a month, and pre-revenue. The software works. Getting clinics to try it is the hard part, and that's what I'm working on now, with landing page changes, Instagram content and Meta ads.</p>
+</section>
+
+<section class="measure" aria-labelledby="resonanza">
+  <h2 id="resonanza">ResonAnza</h2>
+  <p class="site"><a href="https://resonanza.com.br">resonanza.com.br</a>, code in a private repo</p>
+  <p>Brazil's oil regulator publishes records for 31,244 wells: depths, temperatures, logs and production. Decades of that data were collected to find oil. ResonAnza reads it again to find energy, mainly heat.</p>
+
+  <figure class="narrow">
+    <img src="resonanza-chart.png" width="620" height="439" alt="Stacked chart of water produced by three oil fields each month, with a blank gap at March 2026.">
+    <figcaption>Water produced by three fields, from regulator data, with a gap where a month was never published. The gap stays a gap.</figcaption>
+  </figure>
+
+  <h3>What I built</h3>
+  <ul class="built">
+    <li>A Python pipeline that reads scanned well reports with Claude, corrects bottom-hole temperatures with the Horner method and calibrates per basin.</li>
+    <li>A FastAPI service, a Typer CLI and a React 19 dashboard, with exports to PDF reports, GeoJSON and KML. It runs on SQLite locally and on Cloud Run with Postgres in production.</li>
+    <li>450+ pytest tests, with lint and coverage in CI.</li>
+    <li>Every number is labeled as measured or modeled and keeps its source. A missing value stays missing instead of becoming a zero that looks like a measurement.</li>
+  </ul>
+  <h3>The part I'd tell you about over coffee</h3>
+  <p>The first plan was to generate electricity from hot wells. Then I pulled temperatures from real well logs, and onshore gradients came back at 24 to 29 °C/km. That's too low for the turbines the plan depended on, so I dropped it. The focus now is direct heat: three mature fields in the Potiguar Basin produce about 107,000 m³ of water a day, and that water carries heat a small module could recover.</p>
+  <p class="standing">Where it stands: a registered company in Brazil at the study stage. No paying customer or pilot yet.</p>
+</section>
+
+<section class="measure small" aria-labelledby="smaller">
+  <h2 id="smaller">Smaller things</h2>
+  <h3><a href="https://github.com/prinny2/lead-intelligence">lead-intelligence</a></h3>
+  <p>Lead qualification for Brazilian solar installers. A plain Python rules engine returns accept, review or reject with its reasons attached, so a person can audit every decision. A FastAPI service adds LLM scoring on top. Open source, with 21 test files.</p>
+  <h3>Iara</h3>
+  <p>A voice assistant for macOS, written in TypeScript. It runs on Claude, Gemini or local models through Ollama, and it asks before changing anything on the machine. Its memory is a markdown file you can read and edit. The repo is private, but I'm happy to show it.</p>
+  <h3>A PDF engine for marketing work</h3>
+  <p>Python, Jinja and Playwright. One command turns a YAML file into a branded proposal or campaign report, which I use for small local clients.</p>
+</section>
+
+<section class="measure" aria-labelledby="tools">
+  <h2 id="tools">Tools I've shipped with</h2>
+  <dl class="stack">
+    <dt>Languages</dt><dd>TypeScript, Python, JavaScript, SQL</dd>
+    <dt>Product</dt><dd>Next.js, React, Node.js, FastAPI, Tailwind</dd>
+    <dt>Data</dt><dd>Firestore, PostgreSQL, Supabase, SQLite, pandas, NumPy, SciPy</dd>
+    <dt>AI</dt><dd>OpenAI, Claude and Gemini APIs, Ollama, fallback chains, output validation</dd>
+    <dt>Payments, messaging</dt><dd>Stripe, WhatsApp through Z-API</dd>
+    <dt>Infrastructure</dt><dd>Vercel, Google Cloud Run, Firebase, Docker, GitHub Actions</dd>
+    <dt>Testing</dt><dd>Vitest, pytest</dd>
+  </dl>
+  <p style="margin-top:20px">I work with Claude Code and Codex every day, and I treat tests as the thing that keeps that honest.</p>
+</section>
+
+<section class="measure" aria-labelledby="background">
+  <h2 id="background">Background</h2>
+  <p>I studied Production Engineering at UEPA for five semesters, which is where the math and physics come from, and left before finishing. Before writing software full time I did digital marketing for a local business, so I know the selling side isn't an afterthought.</p>
+  <p>Portuguese is my first language. I speak English fluently, and I studied it in Belém and in Canada.</p>
+</section>
+
+<footer class="measure">
+  <p>The easiest way to reach me is <a href="mailto:vpaes.freire02@gmail.com">vpaes.freire02@gmail.com</a>.</p>
+</footer>
+
+</main>
+</body>
+</html>
