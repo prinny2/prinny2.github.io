@@ -4,222 +4,416 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vinícius Freire, software engineer</title>
-<meta name="description" content="I build software products on my own, from the database schema to the checkout page. Looking for an early engineering job, remote from Brazil.">
+<meta name="description" content="I build whole products on my own, from the database to the checkout page. Looking for an early engineering role, remote from Brazil.">
 <meta property="og:title" content="Vinícius Freire, software engineer">
-<meta property="og:description" content="LeadBellus, ResonAnza and the rest of what I've built, with the stack and where each one really stands.">
+<meta property="og:description" content="LeadBellus, ResonAnza and the rest of what I've built. Try the product right on the page.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://prinny2.github.io/lb.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Besley:wght@500;700&family=Hanken+Grotesk:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
-  --tile: #f6f8fc;
-  --cobalt: #1b3fa0;
-  --cobalt-deep: #142f7a;
-  --ink: #131d3b;
-  --quiet: #4a5472;
-  --wash: #dfe7f6;
-  --tile-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23f6f8fc'/%3E%3Cg fill='%231b3fa0'%3E%3Ccircle cx='0' cy='0' r='27'/%3E%3Ccircle cx='120' cy='0' r='27'/%3E%3Ccircle cx='0' cy='120' r='27'/%3E%3Ccircle cx='120' cy='120' r='27'/%3E%3Cellipse cx='60' cy='31' rx='9' ry='23'/%3E%3Cellipse cx='60' cy='89' rx='9' ry='23'/%3E%3Cellipse cx='31' cy='60' rx='23' ry='9'/%3E%3Cellipse cx='89' cy='60' rx='23' ry='9'/%3E%3Cpath d='M60 0l6 6-6 6-6-6zM60 120l6-6-6-6-6 6zM0 60l6 6 6-6-6-6zM120 60l-6 6-6-6 6-6z'/%3E%3C/g%3E%3Cg fill='%23f6f8fc'%3E%3Ccircle cx='0' cy='0' r='17'/%3E%3Ccircle cx='120' cy='0' r='17'/%3E%3Ccircle cx='0' cy='120' r='17'/%3E%3Ccircle cx='120' cy='120' r='17'/%3E%3Ccircle cx='60' cy='60' r='12'/%3E%3C/g%3E%3Cg fill='%231b3fa0'%3E%3Ccircle cx='0' cy='0' r='8'/%3E%3Ccircle cx='120' cy='0' r='8'/%3E%3Ccircle cx='0' cy='120' r='8'/%3E%3Ccircle cx='120' cy='120' r='8'/%3E%3Ccircle cx='60' cy='60' r='5'/%3E%3Ccircle cx='38' cy='38' r='4'/%3E%3Ccircle cx='82' cy='38' r='4'/%3E%3Ccircle cx='38' cy='82' r='4'/%3E%3Ccircle cx='82' cy='82' r='4'/%3E%3C/g%3E%3C/svg%3E");
+  --acai: #2b0f40; --acai2: #431a5f; --acai3: #5a2a7a;
+  --mango: #ffb627; --lilac: #e8dcf5;
+  --paper: #fbf9fe; --ink: #1d1029; --quiet: #5e5270; --line: #e4dcee;
+  --navy: #0b1a36; --navy2: #132748; --gold: #e0ad66;
+  --forest: #06211a; --forest2: #0c3227; --mint: #4fe0ad; --pale: #b4d6c9;
+  --wa: #1fa855;
 }
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  background: var(--tile);
-  color: var(--ink);
-  font: 400 1.0625rem/1.6 "Hanken Grotesk", system-ui, sans-serif;
-}
-.frieze {
-  position: fixed;
-  inset: 0 auto 0 0;
-  width: 120px;
-  background: var(--tile-url) 0 0 / 120px 120px repeat-y;
-  border-right: 4px solid var(--cobalt);
-}
-main {
-  margin-left: 120px;
-  padding: 72px clamp(24px, 7vw, 96px) 88px;
-  max-width: 900px;
-}
-.measure { max-width: 66ch; }
-h1, h2 {
-  font-family: "Besley", Georgia, serif;
-  font-weight: 700;
-  color: var(--cobalt-deep);
-  letter-spacing: -.01em;
-}
-h1 {
-  font-size: clamp(3rem, 8.5vw, 5.75rem);
-  line-height: 1;
-  margin: 0 0 32px;
-}
-h2 {
-  font-size: clamp(1.9rem, 4vw, 2.5rem);
-  line-height: 1.15;
-  margin: 0 0 6px;
-}
-h3 {
-  font: 600 1.0625rem/1.4 "Hanken Grotesk", system-ui, sans-serif;
-  margin: 28px 0 6px;
-}
-p { margin: 0 0 16px; }
-.lede {
-  font-size: clamp(1.25rem, 2.6vw, 1.5rem);
-  line-height: 1.45;
-  margin-bottom: 20px;
-}
-a { color: var(--cobalt); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-a:hover { color: var(--cobalt-deep); text-decoration-thickness: 2px; }
-a:focus-visible { outline: 3px solid var(--cobalt); outline-offset: 3px; border-radius: 2px; }
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-  margin: 28px 0 0;
-  padding: 0;
-  list-style: none;
-  font-weight: 600;
-}
-section { margin-top: 80px; }
-.site { margin: 0 0 20px; color: var(--quiet); }
-ul.built { margin: 0 0 16px; padding-left: 1.15em; }
-ul.built li { margin-bottom: 8px; }
-ul.built li::marker { color: var(--cobalt); }
-figure { margin: 28px 0; }
-figure img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 4px solid var(--cobalt);
-}
-figure.narrow { max-width: 480px; }
-figcaption { margin-top: 8px; font-size: .9375rem; color: var(--quiet); }
-.standing {
-  border-left: 4px solid var(--cobalt);
-  padding: 2px 0 2px 16px;
-  margin: 24px 0 0;
-}
-dl.stack { margin: 16px 0 0; display: grid; grid-template-columns: 11rem 1fr; gap: 8px 20px; }
-dl.stack dt { font-weight: 600; }
-dl.stack dd { margin: 0; }
-.small h3 { margin-top: 24px; }
-footer { margin-top: 80px; padding-top: 24px; border-top: 4px solid var(--cobalt); }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.6 "Hanken Grotesk", system-ui, sans-serif; }
+h1, h2, h3 { font-family: "Familjen Grotesk", system-ui, sans-serif; font-weight: 700; margin: 0; letter-spacing: -.02em; }
+p { margin: 0 0 14px; }
+a { color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--mango); outline-offset: 3px; border-radius: 6px; }
+.wrap { width: min(1160px, 100%); margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); }
 
-@media (max-width: 760px) {
-  .frieze {
-    position: static;
-    width: auto;
-    height: 72px;
-    background-size: 72px 72px;
-    background-repeat: repeat-x;
-    border-right: 0;
-    border-bottom: 4px solid var(--cobalt);
-  }
-  main { margin-left: 0; padding: 40px 22px 64px; }
-  section { margin-top: 60px; }
-  dl.stack { grid-template-columns: 1fr; gap: 0; }
-  dl.stack dd { margin-bottom: 12px; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; }
+nav .name { font: 700 1.15rem "Familjen Grotesk", sans-serif; text-decoration: none; }
+nav ul { display: flex; gap: 26px; margin: 0; padding: 0; list-style: none; font-weight: 500; }
+nav ul a { text-decoration: none; opacity: .85; }
+nav ul a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+
+.btn { display: inline-flex; align-items: center; gap: 9px; padding: 13px 22px; border-radius: 999px; font-weight: 600; text-decoration: none; transition: transform .12s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn.primary { background: var(--mango); color: var(--ink); }
+.btn.line { border: 1.5px solid currentColor; }
+.btn svg { width: 19px; height: 19px; fill: currentColor; }
+
+.hero { background: var(--acai); color: #fff; background-image: radial-gradient(900px 500px at 88% -5%, var(--acai3), transparent 70%); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: 56px; align-items: center; padding: 34px 0 84px; }
+.who { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+.who img { width: 66px; height: 66px; border-radius: 50%; object-fit: cover; border: 2px solid var(--mango); }
+.who b { display: block; font-size: 1.1rem; }
+.who span { color: var(--lilac); font-size: .98rem; }
+h1 { font-size: clamp(3rem, 7.2vw, 5.4rem); line-height: .98; margin-bottom: 24px; }
+.lede { font-size: clamp(1.16rem, 2.1vw, 1.36rem); line-height: 1.45; color: #f3ecfa; max-width: 34em; }
+.trip { color: var(--lilac); max-width: 36em; margin-bottom: 26px; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 36px; }
+.facts { display: flex; flex-wrap: wrap; gap: 14px 40px; margin: 0; padding: 22px 0 0; list-style: none; border-top: 1px solid rgba(255,255,255,.2); }
+.facts b { display: block; font: 700 1.9rem/1.1 "Familjen Grotesk", sans-serif; color: var(--mango); }
+.facts span { color: var(--lilac); font-size: .95rem; }
+
+.demo { margin: 0; }
+.phone { width: min(372px, 100%); margin: 0 auto; background: #0b141a; border-radius: 34px; border: 9px solid #15101d; box-shadow: 0 30px 70px rgba(0,0,0,.45); overflow: hidden; color: #e9edef; }
+.ph-head { display: flex; align-items: center; gap: 10px; padding: 12px 15px; background: #202c33; }
+.ph-head i { width: 36px; height: 36px; border-radius: 50%; background: var(--acai3); display: grid; place-items: center; font: 600 1rem "Hanken Grotesk", sans-serif; }
+.ph-head b { display: block; font-size: .98rem; line-height: 1.2; }
+.ph-head small { color: #8696a0; }
+.ph-body { min-height: 330px; padding: 14px 12px; display: flex; flex-direction: column; gap: 8px; background: #0b141a; font-size: .96rem; line-height: 1.42; }
+.bub { max-width: 88%; padding: 8px 11px; border-radius: 10px; animation: pop .22s ease both; }
+.bub.in { align-self: flex-start; background: #202c33; border-top-left-radius: 2px; }
+.bub.out { align-self: flex-end; background: #005c4b; border-top-right-radius: 2px; }
+.bub small { display: block; margin-top: 4px; color: #a9c9c1; font-size: .76rem; }
+.dots { display: inline-flex; gap: 4px; padding: 3px 1px; }
+.dots i { width: 7px; height: 7px; border-radius: 50%; background: #8696a0; animation: blink 1s infinite; }
+.dots i:nth-child(2) { animation-delay: .15s; } .dots i:nth-child(3) { animation-delay: .3s; }
+@keyframes blink { 50% { opacity: .3; } }
+@keyframes pop { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.ph-tabs { display: grid; grid-template-columns: repeat(3, 1fr); background: #202c33; }
+.ph-tabs button { background: none; border: 0; border-top: 2.5px solid transparent; color: #aebac1; padding: 12px 4px; font: 600 .86rem "Hanken Grotesk", sans-serif; cursor: pointer; }
+.ph-tabs button[aria-pressed="true"] { color: var(--mango); border-top-color: var(--mango); }
+.ctl { width: min(372px, 100%); margin: 16px auto 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.chips button { background: rgba(255,255,255,.1); color: #fff; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; padding: 7px 13px; font: 500 .9rem "Hanken Grotesk", sans-serif; cursor: pointer; }
+.chips button[aria-pressed="true"] { background: var(--mango); border-color: var(--mango); color: var(--ink); }
+.ctl p { font-size: .88rem; color: var(--lilac); margin: 0; }
+.ctl button.lang { background: none; border: 0; color: var(--mango); padding: 0; font: 600 .88rem "Hanken Grotesk", sans-serif; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+
+.room { padding: 92px 0; }
+.room h2 { font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1; margin-bottom: 14px; }
+.tag { font-size: 1.14rem; max-width: 40em; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 16px 0 0; font-weight: 600; }
+.split { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 52px; align-items: center; margin-bottom: 52px; }
+.browser { border-radius: 12px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.4); }
+.browser .bar { display: flex; align-items: center; gap: 6px; height: 34px; padding: 0 13px; background: #e7e3ec; color: #4b4556; font-size: .8rem; }
+.browser .bar i { width: 10px; height: 10px; border-radius: 50%; background: #c6bfd0; }
+.browser .bar span { margin-left: 10px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px 34px; }
+.grid h3 { font-size: 1.14rem; letter-spacing: -.01em; margin-bottom: 5px; }
+.grid p { margin: 0; font-size: 1rem; }
+.status { margin: 48px 0 0; padding: 18px 22px; border-radius: 12px; font-size: 1.06rem; }
+.status b { font-weight: 600; }
+
+.lb { background: var(--navy); color: #f2f4f9; background-image: radial-gradient(800px 420px at 95% 0, var(--navy2), transparent 70%); }
+.lb h2, .lb .grid h3 { color: var(--gold); }
+.lb .tag, .lb .grid p { color: #d6ddea; }
+.lb .links a { color: var(--gold); }
+.lb .status { background: var(--navy2); }
+
+.rz { background: var(--forest); color: #edf8f3; background-image: radial-gradient(800px 420px at 5% 0, var(--forest2), transparent 70%); }
+.rz h2, .rz .grid h3 { color: var(--mint); }
+.rz .tag, .rz .grid p, .rz .story p { color: #cde3da; }
+.rz .links a { color: var(--mint); }
+.rz .status { background: var(--forest2); }
+.chart { background: var(--forest2); border-radius: 14px; padding: 20px 20px 14px; margin-bottom: 52px; }
+.chart h3 { font-size: 1.2rem; letter-spacing: 0; }
+.chart .read { color: var(--mango); font-size: 1rem; min-height: 1.6em; margin: 2px 0 8px; }
+.chart svg { display: block; width: 100%; height: auto; touch-action: pan-y; }
+.chart text { fill: var(--pale); font: 500 11px "Hanken Grotesk", sans-serif; }
+.chart small { display: block; color: var(--pale); margin-top: 6px; font-size: .88rem; }
+.story { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 52px; margin: 0 0 40px; align-items: center; }
+.story h3 { font-size: 1.8rem; color: #fff; margin-bottom: 10px; line-height: 1.15; }
+.gauge { background: var(--forest2); border-radius: 14px; padding: 22px; }
+.gauge .track { position: relative; height: 34px; border-radius: 8px; background: rgba(255,255,255,.08); margin: 34px 0 34px; }
+.gauge .meas { position: absolute; top: 0; bottom: 0; left: 40%; width: 25%; background: var(--mint); border-radius: 8px; }
+.gauge .need { position: absolute; top: -8px; bottom: -8px; left: 75%; width: 3px; background: var(--mango); }
+.gauge .lab { position: absolute; font-size: .88rem; white-space: nowrap; }
+.gauge .l1 { top: -25px; left: 40%; color: var(--mint); }
+.gauge .l2 { bottom: -28px; left: 75%; transform: translateX(-50%); color: var(--mango); }
+.gauge p { margin: 0; color: var(--pale); font-size: .94rem; }
+
+.more h2 { font-size: clamp(2rem, 4.4vw, 2.9rem); margin-bottom: 30px; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+.card h3 { font-size: 1.3rem; margin-bottom: 8px; color: var(--acai); }
+.card p { margin: 0; color: var(--quiet); font-size: 1rem; }
+.card a { color: var(--acai2); font-weight: 600; }
+.dec { display: flex; gap: 6px; margin-bottom: 14px; }
+.dec span { padding: 3px 10px; border-radius: 999px; font: 600 .8rem "Hanken Grotesk", sans-serif; }
+.dec .a { background: #d6f5e6; color: #0d6b45; } .dec .r { background: #fff0cc; color: #7a5600; } .dec .x { background: #fbdcdc; color: #8f2424; }
+
+.stack { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 56px; }
+.stack div { display: grid; grid-template-columns: 8.5rem 1fr; gap: 14px; padding: 13px 0; border-top: 1px solid var(--line); }
+.stack b { font-weight: 600; color: var(--acai); }
+.bg { max-width: 44em; margin-top: 34px; color: var(--quiet); }
+
+.contact { background: var(--acai); color: #fff; padding: 88px 0; background-image: radial-gradient(800px 420px at 12% 110%, var(--acai3), transparent 70%); }
+.contact h2 { font-size: clamp(2.6rem, 6.4vw, 4.4rem); line-height: 1; margin-bottom: 14px; }
+.contact .say { color: var(--lilac); max-width: 38em; font-size: 1.14rem; }
+.ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 32px 0 0; padding: 0; list-style: none; }
+.ways a { display: block; height: 100%; padding: 18px 20px; border-radius: 14px; background: rgba(255,255,255,.08); text-decoration: none; transition: background .12s ease; }
+.ways a:hover { background: rgba(255,255,255,.16); }
+.ways a.wa { background: var(--wa); }
+.ways a.wa:hover { background: #24bb60; }
+.ways b { display: block; font-weight: 600; margin-bottom: 2px; }
+.ways span { color: #f3ecfa; font-size: .98rem; overflow-wrap: anywhere; }
+
+@media (max-width: 920px) {
+  .hero-grid, .split, .story { grid-template-columns: 1fr; gap: 40px; }
+  .hero-grid { padding: 16px 0 60px; }
+  .grid, .cards, .ways { grid-template-columns: repeat(2, 1fr); }
+  .stack { grid-template-columns: 1fr; }
+  .room { padding: 68px 0; }
 }
-@media print {
-  .frieze { display: none; }
-  main { margin: 0; padding: 0; }
+@media (max-width: 560px) {
+  nav ul li:not(:last-child) { display: none; }
+  .grid, .cards, .ways { grid-template-columns: 1fr; }
+  .stack div { grid-template-columns: 1fr; gap: 0; }
+  .facts { gap: 12px 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .bub, .dots i, .btn { animation: none; transition: none; }
 }
 </style>
 </head>
 <body>
-<div class="frieze" aria-hidden="true"></div>
-<main>
 
-<header class="measure">
-  <h1>Vinícius Freire</h1>
-  <p class="lede">I build software products on my own, from the database schema to the checkout page. I'm from Belém, at the mouth of the Amazon.</p>
-  <p>I'm looking for an early engineering job at a startup, working remotely from Brazil as a contractor. I'll be in Miami November 7 to 11 and in New York November 12 to 16, and I'd like to meet you for a coffee.</p>
-  <ul class="links">
-    <li><a href="mailto:vpaes.freire02@gmail.com">vpaes.freire02@gmail.com</a></li>
-    <li><a href="vinicius-freire-resume.pdf">Resume (PDF)</a></li>
-    <li><a href="https://www.linkedin.com/in/vin%C3%ADcius-freire-86a16841a/">LinkedIn</a></li>
-    <li><a href="https://github.com/prinny2">GitHub</a></li>
-  </ul>
-</header>
+<div class="hero">
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="name" href="#top">Vinícius Freire</a>
+      <ul>
+        <li><a href="#leadbellus">LeadBellus</a></li>
+        <li><a href="#resonanza">ResonAnza</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-grid" id="top">
+      <div>
+        <div class="who">
+          <img src="photo.jpg" alt="Vinícius Freire" width="148" height="148">
+          <div><b>Vinícius Freire</b><span>Software engineer from Belém, Brazil</span></div>
+        </div>
+        <h1>I build whole products on my own.</h1>
+        <p class="lede">From the database to the checkout page. This year I shipped an AI sales tool for clinics and a data platform that looks for energy in old oil well records.</p>
+        <p class="trip">I'm looking for an early engineering role, remote from Brazil. I'm in Miami November 7 to 11 and New York November 12 to 16, and I'd like to meet.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://wa.me/5591992875776"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.6-4-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>WhatsApp me</a>
+          <a class="btn line" href="#contact">All contacts</a>
+          <a class="btn line" href="vinicius-freire-resume.pdf">Resume</a>
+        </div>
+        <ul class="facts">
+          <li><b>3</b><span>products built in 2026</span></li>
+          <li><b>850+</b><span>automated tests</span></li>
+          <li><b>31,244</b><span>wells in the dataset</span></li>
+        </ul>
+      </div>
+      <figure class="demo" aria-label="Interactive LeadBellus demo">
+        <div class="phone">
+          <div class="ph-head"><i aria-hidden="true">C</i><div><b>Clinic client</b><small>WhatsApp</small></div></div>
+          <div class="ph-body" id="chat" aria-live="polite"></div>
+          <div class="ph-tabs" id="tabs">
+            <button type="button" data-i="0" aria-pressed="true">Gentle</button>
+            <button type="button" data-i="1" aria-pressed="false">Consultative</button>
+            <button type="button" data-i="2" aria-pressed="false">Closing</button>
+          </div>
+        </div>
+        <div class="ctl">
+          <div class="chips" id="chips">
+            <button type="button" data-s="0" aria-pressed="true">Asks the price</button>
+            <button type="button" data-s="1" aria-pressed="false">"I'll think about it"</button>
+          </div>
+          <p>Real replies from LeadBellus, translated. <button type="button" class="lang" id="lang">See the Portuguese</button></p>
+        </div>
+      </figure>
+    </div>
+  </div>
+</div>
 
-<section class="measure" aria-labelledby="leadbellus">
-  <h2 id="leadbellus">LeadBellus</h2>
-  <p class="site"><a href="https://www.leadbellus.com.br">leadbellus.com.br</a>, <a href="https://github.com/prinny2/leadvitta-app">source on GitHub</a></p>
-  <p>Aesthetic clinics in Brazil sell over WhatsApp. LeadBellus takes a client's message, like "how much is Botox?" or "that's too expensive", and writes three replies in the clinic's tone. Someone on the team picks one and sends it. You can try it on the home page without signing up.</p>
-
-  <figure class="narrow">
-    <img src="leadbellus-replies.png" width="660" height="550" alt="Three generated WhatsApp replies in Portuguese, labeled gentle, consultative and closing.">
-    <figcaption>The live demo, answering "how much is Botox?". The product is in Portuguese.</figcaption>
-  </figure>
-
-  <h3>What I built</h3>
-  <ul class="built">
-    <li>The whole app, alone: Next.js 16, React 19, TypeScript and Firestore.</li>
-    <li>A fallback chain across OpenAI, Claude and Gemini with timeouts and retries, so one provider going down doesn't stop the product.</li>
-    <li>A check after generation that flags what a clinic must not say, like guaranteed results, diagnoses or fixed prices. It still misses things, so I keep adding rules. The latest ones reject replies where the model made up a schedule, a duration or a clinic policy.</li>
-    <li>Stripe subscriptions in live mode, with checkout, a billing portal and idempotent webhooks. Free usage is limited inside a Firestore transaction, so concurrent requests can't get around it.</li>
-    <li>A WhatsApp integration through Z-API with an inbox and auto-reply. It's built, but switched off on the live product, which works by copy and paste so clinics stay in control of what gets sent.</li>
-    <li>400+ Vitest tests with every network call mocked, and a demo mode that runs the whole app with no API keys.</li>
-  </ul>
-  <p class="standing">Where it stands: live at R$97 a month, and pre-revenue. The software works. Getting clinics to try it is the hard part, and that's what I'm working on now, with landing page changes, Instagram content and Meta ads.</p>
+<section class="room lb" id="leadbellus">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2>LeadBellus</h2>
+        <p class="tag">Aesthetic clinics in Brazil sell over WhatsApp. LeadBellus turns a client's message into three replies in the clinic's tone. Someone on the team picks one and sends it.</p>
+        <div class="links"><a href="https://www.leadbellus.com.br">Try it live</a><a href="https://github.com/prinny2/leadvitta-app">Read the code</a></div>
+      </div>
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i><span>leadbellus.com.br</span></div>
+        <img src="lb.jpg" alt="LeadBellus landing page" width="1920" height="1140" loading="lazy">
+      </div>
+    </div>
+    <div class="grid">
+      <div><h3>The whole app</h3><p>Next.js 16, React 19, TypeScript and Firestore, built and run alone.</p></div>
+      <div><h3>LLM fallback chain</h3><p>OpenAI, Claude and Gemini with timeouts and retries, so one provider going down doesn't stop the product.</p></div>
+      <div><h3>Output checks</h3><p>Flags what a clinic must not say, like guaranteed results or diagnoses. It still misses things, so I keep adding rules.</p></div>
+      <div><h3>Billing</h3><p>Stripe subscriptions in live mode, with idempotent webhooks and a free tier enforced in a Firestore transaction.</p></div>
+      <div><h3>WhatsApp integration</h3><p>Inbox and auto-reply through Z-API. Built, and switched off for now so clinics stay in control of what gets sent.</p></div>
+      <div><h3>Tests</h3><p>400+ Vitest tests with network calls mocked, and a demo mode that runs the app with no API keys.</p></div>
+    </div>
+    <p class="status"><b>Where it stands:</b> live at R$97 a month and pre-revenue. The software works. Getting clinics to try it is the hard part, and it's what I'm working on now.</p>
+  </div>
 </section>
 
-<section class="measure" aria-labelledby="resonanza">
-  <h2 id="resonanza">ResonAnza</h2>
-  <p class="site"><a href="https://resonanza.com.br">resonanza.com.br</a>, code in a private repo</p>
-  <p>Brazil's oil regulator publishes records for 31,244 wells: depths, temperatures, logs and production. Decades of that data were collected to find oil. ResonAnza reads it again to find energy, mainly heat.</p>
-
-  <figure class="narrow">
-    <img src="resonanza-chart.png" width="620" height="439" alt="Stacked chart of water produced by three oil fields each month, with a blank gap at March 2026.">
-    <figcaption>Water produced by three fields, from regulator data, with a gap where a month was never published. The gap stays a gap.</figcaption>
-  </figure>
-
-  <h3>What I built</h3>
-  <ul class="built">
-    <li>A Python pipeline that reads scanned well reports with Claude, corrects bottom-hole temperatures with the Horner method and calibrates per basin.</li>
-    <li>A FastAPI service, a Typer CLI and a React 19 dashboard, with exports to PDF reports, GeoJSON and KML. It runs on SQLite locally and on Cloud Run with Postgres in production.</li>
-    <li>450+ pytest tests, with lint and coverage in CI.</li>
-    <li>Every number is labeled as measured or modeled and keeps its source. A missing value stays missing instead of becoming a zero that looks like a measurement.</li>
-  </ul>
-  <h3>The part I'd tell you about over coffee</h3>
-  <p>The first plan was to generate electricity from hot wells. Then I pulled temperatures from real well logs, and onshore gradients came back at 24 to 29 °C/km. That's too low for the turbines the plan depended on, so I dropped it. The focus now is direct heat: three mature fields in the Potiguar Basin produce about 107,000 m³ of water a day, and that water carries heat a small module could recover.</p>
-  <p class="standing">Where it stands: a registered company in Brazil at the study stage. No paying customer or pilot yet.</p>
+<section class="room rz" id="resonanza">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2>ResonAnza</h2>
+        <p class="tag">Brazil's oil regulator publishes records for 31,244 wells. They were collected to find oil. ResonAnza reads them again to find energy, mainly heat.</p>
+        <div class="links"><a href="https://resonanza.com.br">Visit the site</a></div>
+      </div>
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i><span>resonanza.com.br</span></div>
+        <img src="rz.jpg" alt="ResonAnza website" width="1200" height="720" loading="lazy">
+      </div>
+    </div>
+    <div class="chart">
+      <h3>Water produced by three Potiguar fields, m³ per day</h3>
+      <p class="read" id="read">Move over the chart to read a month.</p>
+      <svg id="plot" viewBox="0 0 880 250" role="img" aria-label="Water produced per day from January 2025 to August 2026, around 100 to 115 thousand cubic meters, with a gap at March 2026."></svg>
+      <small>Regulator data. March 2026 was never published, so it stays a gap instead of a fake zero.</small>
+    </div>
+    <div class="story">
+      <div>
+        <h3>The data killed my first plan, so I changed the plan.</h3>
+        <p>I started out to generate electricity from hot wells. Real well logs came back at 24 to 29 °C/km onshore, below the roughly 30 the turbines need. I dropped it. The focus now is direct heat from the water these fields already produce.</p>
+      </div>
+      <div class="gauge">
+        <div class="track"><span class="lab l1">Measured: 24 to 29 °C/km</span><div class="meas"></div><div class="need"></div><span class="lab l2">Needed: about 30</span></div>
+        <p>Every number in ResonAnza is labeled measured or modeled, and keeps its source.</p>
+      </div>
+    </div>
+    <div class="grid">
+      <div><h3>Extraction pipeline</h3><p>Python that reads scanned well reports with Claude, corrects bottom-hole temperatures with the Horner method and calibrates per basin.</p></div>
+      <div><h3>Service and dashboard</h3><p>FastAPI, a Typer CLI and a React 19 dashboard, with PDF, GeoJSON and KML exports, on Cloud Run with Postgres.</p></div>
+      <div><h3>Tests</h3><p>450+ pytest tests, with lint and coverage in CI.</p></div>
+    </div>
+    <p class="status"><b>Where it stands:</b> a registered company in Brazil at the study stage, with no paying customer or pilot yet.</p>
+  </div>
 </section>
 
-<section class="measure small" aria-labelledby="smaller">
-  <h2 id="smaller">Smaller things</h2>
-  <h3><a href="https://github.com/prinny2/lead-intelligence">lead-intelligence</a></h3>
-  <p>Lead qualification for Brazilian solar installers. A plain Python rules engine returns accept, review or reject with its reasons attached, so a person can audit every decision. A FastAPI service adds LLM scoring on top. Open source, with 21 test files.</p>
-  <h3>Iara</h3>
-  <p>A voice assistant for macOS, written in TypeScript. It runs on Claude, Gemini or local models through Ollama, and it asks before changing anything on the machine. Its memory is a markdown file you can read and edit. The repo is private, but I'm happy to show it.</p>
-  <h3>A PDF engine for marketing work</h3>
-  <p>Python, Jinja and Playwright. One command turns a YAML file into a branded proposal or campaign report, which I use for small local clients.</p>
+<section class="room more">
+  <div class="wrap">
+    <h2>Also built</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="dec" aria-hidden="true"><span class="a">accept</span><span class="r">review</span><span class="x">reject</span></div>
+        <h3>lead-intelligence</h3>
+        <p>Lead qualification for Brazilian solar installers. A Python rules engine gives every decision with its reasons, and a FastAPI service adds LLM scoring. <a href="https://github.com/prinny2/lead-intelligence">Open source</a>.</p>
+      </div>
+      <div class="card">
+        <h3>Iara</h3>
+        <p>A voice assistant for macOS in TypeScript. It runs on Claude, Gemini or local models, asks before changing anything, and keeps its memory in a markdown file you can edit. Private repo, happy to show it.</p>
+      </div>
+      <div class="card">
+        <h3>PDF engine</h3>
+        <p>Python, Jinja and Playwright. One command turns a YAML file into a branded proposal or campaign report for small local clients.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="measure" aria-labelledby="tools">
-  <h2 id="tools">Tools I've shipped with</h2>
-  <dl class="stack">
-    <dt>Languages</dt><dd>TypeScript, Python, JavaScript, SQL</dd>
-    <dt>Product</dt><dd>Next.js, React, Node.js, FastAPI, Tailwind</dd>
-    <dt>Data</dt><dd>Firestore, PostgreSQL, Supabase, SQLite, pandas, NumPy, SciPy</dd>
-    <dt>AI</dt><dd>OpenAI, Claude and Gemini APIs, Ollama, fallback chains, output validation</dd>
-    <dt>Payments, messaging</dt><dd>Stripe, WhatsApp through Z-API</dd>
-    <dt>Infrastructure</dt><dd>Vercel, Google Cloud Run, Firebase, Docker, GitHub Actions</dd>
-    <dt>Testing</dt><dd>Vitest, pytest</dd>
-  </dl>
-  <p style="margin-top:20px">I work with Claude Code and Codex every day, and I treat tests as the thing that keeps that honest.</p>
+<section class="room more" id="stack" style="padding-top:0">
+  <div class="wrap">
+    <h2>What I've shipped with</h2>
+    <div class="stack">
+      <div><b>Languages</b><span>TypeScript, Python, JavaScript, SQL</span></div>
+      <div><b>Product</b><span>Next.js, React, Node.js, FastAPI, Tailwind</span></div>
+      <div><b>Data</b><span>Firestore, PostgreSQL, Supabase, SQLite, pandas, NumPy, SciPy</span></div>
+      <div><b>AI</b><span>OpenAI, Claude and Gemini APIs, Ollama, Claude Code, Codex</span></div>
+      <div><b>Payments</b><span>Stripe, WhatsApp through Z-API</span></div>
+      <div><b>Infrastructure</b><span>Vercel, Google Cloud Run, Firebase, Docker, GitHub Actions</span></div>
+    </div>
+    <p class="bg">I studied Production Engineering at UEPA for five semesters, which is where the math and physics come from, and left before finishing. Portuguese is my first language, and I speak English fluently.</p>
+  </div>
 </section>
 
-<section class="measure" aria-labelledby="background">
-  <h2 id="background">Background</h2>
-  <p>I studied Production Engineering at UEPA for five semesters, which is where the math and physics come from, and left before finishing. Before writing software full time I did digital marketing for a local business, so I know the selling side isn't an afterthought.</p>
-  <p>Portuguese is my first language. I speak English fluently, and I studied it in Belém and in Canada.</p>
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's talk.</h2>
+    <p class="say">WhatsApp is the fastest way to reach me, in the US and in Brazil.</p>
+    <ul class="ways">
+      <li><a class="wa" href="https://wa.me/5591992875776"><b>WhatsApp</b><span>+55 91 99287-5776</span></a></li>
+      <li><a href="tel:+5591992875776"><b>Phone</b><span>+55 91 99287-5776</span></a></li>
+      <li><a href="mailto:vpaes.freire02@gmail.com"><b>Email</b><span>vpaes.freire02@gmail.com</span></a></li>
+      <li><a href="https://www.linkedin.com/in/vin%C3%ADcius-freire-86a16841a/"><b>LinkedIn</b><span>Vinícius Freire</span></a></li>
+      <li><a href="https://github.com/prinny2"><b>GitHub</b><span>github.com/prinny2</span></a></li>
+      <li><a href="vinicius-freire-resume.pdf"><b>Resume</b><span>Download the PDF</span></a></li>
+    </ul>
+  </div>
 </section>
 
-<footer class="measure">
-  <p>The easiest way to reach me is <a href="mailto:vpaes.freire02@gmail.com">vpaes.freire02@gmail.com</a>.</p>
-</footer>
+<script>
+(function () {
+  var S = [
+    { m: { en: "Hi! How much is Botox?", pt: "Oi! Quanto fica o botox?" }, r: [
+      { en: "Hi, lovely! 😊 The price of Botox depends on the assessment and your goal, like smoothing your forehead or expression lines. What made you consider Botox?",
+        pt: "Oi, linda! 😊 O valor do botox depende da avaliação e do seu objetivo, como suavizar a testa ou as linhas de expressão. O que te motivou a considerar o botox?" },
+      { en: "Hi, lovely! The price of Botox varies with the assessment of your muscles and what you want, like smoothing your forehead or crow's feet. Every case is different, and we want you to end up with a natural result. Which areas would you like to treat?",
+        pt: "Oi, linda! O preço do botox varia conforme a avaliação da sua musculatura e o objetivo desejado, como suavizar a testa ou os pés de galinha. Cada caso é único e queremos garantir que você fique com um resultado natural. Que áreas você gostaria de tratar?" },
+      { en: "Hi, lovely! The price of Botox depends on the assessment, because we need to understand your goals and your muscles. Want me to find a time for that assessment so we can talk about what worries you? 💖",
+        pt: "Oi, linda! O valor do botox depende da avaliação, pois precisamos entender seus objetivos e a musculatura. Quer que eu veja um horário para você fazer essa avaliação e conversarmos sobre o que te preocupa? 💖" }
+    ] },
+    { m: { en: "I'll think about it and let you know, ok?", pt: "Vou pensar e te aviso, tá?" }, r: [
+      { en: "Hi, lovely! 😊 I'm rooting for you to make the best decision. If you need more information or have any questions, I'm here! How about booking an assessment so we can talk about your goals?",
+        pt: "Oi, linda! 😊 Fico aqui torcendo para que você tome a melhor decisão. Se precisar de mais informações ou tiver alguma dúvida, estou à disposição! Que tal agendarmos uma avaliação para conversarmos melhor sobre suas metas?" },
+      { en: "Hi, lovely! I understand it's an important decision. Remember that every case is different, and an assessment can help figure out what's best for you. Can I help you book a time?",
+        pt: "Oi, linda! Compreendo que é uma decisão importante. Lembre-se de que cada caso é único e uma avaliação pode ajudar a entender o que é melhor para você. Posso te ajudar a agendar um horário?" },
+      { en: "Hi, lovely! Hope you're well! 😊 If you need help deciding, how about booking an assessment? That way I can better understand what you need and help with what's best for you. Morning or afternoon?",
+        pt: "Oi, linda! Espero que esteja bem! 😊 Se precisar de apoio para decidir, que tal agendarmos uma avaliação? Assim, posso entender melhor suas necessidades e te ajudar no que for melhor. Prefere manhã ou tarde?" }
+    ] }
+  ];
+  var chat = document.getElementById('chat'), tabs = document.getElementById('tabs'), chips = document.getElementById('chips'), lang = document.getElementById('lang');
+  var s = 0, t = 0, L = 'en', timer = null, still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function bub(cls, text, note) {
+    var d = document.createElement('div'); d.className = 'bub ' + cls; d.textContent = text;
+    if (note) { var n = document.createElement('small'); n.textContent = note; d.appendChild(n); }
+    chat.appendChild(d); return d;
+  }
+  function reply() {
+    var old = chat.querySelector('.bub.out'); if (old) old.remove();
+    bub('out', S[s].r[t][L], 'Draft from LeadBellus. A person reviews and sends.');
+  }
+  function play() {
+    clearTimeout(timer); chat.textContent = '';
+    bub('in', S[s].m[L]);
+    if (still) { reply(); return; }
+    var d = document.createElement('div'); d.className = 'bub in';
+    d.innerHTML = '<span class="dots"><i></i><i></i><i></i></span>';
+    timer = setTimeout(function () { chat.appendChild(d); timer = setTimeout(function () { d.remove(); reply(); }, 1100); }, 450);
+  }
+  function press(box, attr, v) { [].forEach.call(box.querySelectorAll('button'), function (b) { b.setAttribute('aria-pressed', b.getAttribute(attr) == v); }); }
+  tabs.addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b) return; t = +b.dataset.i; press(tabs, 'data-i', t); reply(); });
+  chips.addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b) return; s = +b.dataset.s; press(chips, 'data-s', s); play(); });
+  lang.addEventListener('click', function () { L = L === 'en' ? 'pt' : 'en'; lang.textContent = L === 'en' ? 'See the Portuguese' : 'See the English'; clearTimeout(timer); chat.textContent = ''; bub('in', S[s].m[L]); reply(); });
+  play();
 
-</main>
+  var D = [["2025-01",103566],["2025-02",107263],["2025-03",109786],["2025-04",111219],["2025-05",112536],["2025-06",114959],["2025-07",114294],["2025-08",112218],["2025-09",107803],["2025-10",101855],["2025-11",103175],["2025-12",104040],["2026-01",104155],["2026-02",103550],["2026-03",null],["2026-04",101201],["2026-05",104970],["2026-06",108170],["2026-07",106027],["2026-08",107237]];
+  var M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var svg = document.getElementById('plot'), read = document.getElementById('read'), ns = 'http://www.w3.org/2000/svg';
+  var W = 880, x0 = 40, x1 = 872, y0 = 12, y1 = 222, lo = 90000, hi = 120000;
+  function X(i) { return x0 + (x1 - x0) * i / (D.length - 1); }
+  function Y(v) { return y1 - (y1 - y0) * (v - lo) / (hi - lo); }
+  function el(n, a, tx) { var e = document.createElementNS(ns, n); for (var k in a) e.setAttribute(k, a[k]); if (tx) e.textContent = tx; svg.appendChild(e); return e; }
+  [90000, 100000, 110000, 120000].forEach(function (v) { el('line', { x1: x0, x2: x1, y1: Y(v), y2: Y(v), stroke: 'rgba(255,255,255,.12)' }); el('text', { x: 0, y: Y(v) + 4 }, (v / 1000) + 'k'); });
+  [[0, 'Jan 2025'], [12, 'Jan 2026'], [19, 'Aug 2026']].forEach(function (p, j) { el('text', { x: X(p[0]), y: 244, 'text-anchor': j === 2 ? 'end' : 'start' }, p[1]); });
+  function seg(a, b) {
+    var p = 'M' + X(a) + ' ' + y1, l = '';
+    for (var i = a; i <= b; i++) { p += ' L' + X(i) + ' ' + Y(D[i][1]); l += (i === a ? 'M' : ' L') + X(i) + ' ' + Y(D[i][1]); }
+    el('path', { d: p + ' L' + X(b) + ' ' + y1 + ' Z', fill: 'rgba(79,224,173,.2)' });
+    el('path', { d: l, fill: 'none', stroke: '#4fe0ad', 'stroke-width': 2.5, 'stroke-linejoin': 'round' });
+  }
+  seg(0, 13); seg(15, 19);
+  el('line', { x1: X(14), x2: X(14), y1: y0, y2: y1, stroke: '#ffb627', 'stroke-dasharray': '4 4' });
+  var dot = el('circle', { r: 5, fill: '#ffb627', opacity: 0 });
+  function pick(cx) {
+    var r = svg.getBoundingClientRect(), i = Math.round(((cx - r.left) / r.width * W - x0) / (x1 - x0) * (D.length - 1));
+    i = Math.max(0, Math.min(D.length - 1, i));
+    var d = D[i], name = M[+d[0].slice(5, 7) - 1] + ' ' + d[0].slice(0, 4);
+    if (d[1] === null) { read.textContent = name + ': not published'; dot.setAttribute('opacity', 0); return; }
+    read.textContent = name + ': ' + d[1].toLocaleString('en-US') + ' m³ per day';
+    dot.setAttribute('cx', X(i)); dot.setAttribute('cy', Y(d[1])); dot.setAttribute('opacity', 1);
+  }
+  svg.addEventListener('pointermove', function (e) { pick(e.clientX); });
+  svg.addEventListener('pointerdown', function (e) { pick(e.clientX); });
+})();
+</script>
 </body>
 </html>
