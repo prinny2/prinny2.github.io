@@ -240,11 +240,11 @@ h1 { font-size: clamp(3rem, 7.2vw, 5.4rem); line-height: .98; margin-bottom: 24p
       </div>
     </div>
     <div class="grid">
-      <div><h3>The whole app</h3><p>Next.js 16, React 19, TypeScript and Firestore, built and run alone.</p></div>
+      <div><h3>The whole app</h3><p>Next.js 16, React 19, TypeScript and Firestore, built and run alone. In production on AWS EC2, in Docker behind Caddy, deployed by GitHub Actions on every push.</p></div>
       <div><h3>LLM fallback chain</h3><p>OpenAI, Claude and Gemini with timeouts and retries, so one provider going down doesn't stop the product.</p></div>
       <div><h3>Output checks</h3><p>Flags what a clinic must not say, like guaranteed results or diagnoses. It still misses things, so I keep adding rules.</p></div>
       <div><h3>Billing</h3><p>Stripe subscriptions in live mode, with idempotent webhooks and a free tier enforced in a Firestore transaction.</p></div>
-      <div><h3>WhatsApp integration</h3><p>Inbox and auto-reply through Z-API. Built, and switched off for now so clinics stay in control of what gets sent.</p></div>
+      <div><h3>WhatsApp integration</h3><p>Meta's Cloud API and Z-API. Messages land in an inbox, the AI drafts a reply, and a person always presses Send.</p></div>
       <div><h3>Tests</h3><p>400+ Vitest tests with network calls mocked, and a demo mode that runs the app with no API keys.</p></div>
     </div>
     <p class="status"><b>Where it stands:</b> live at R$97 a month and pre-revenue. The software works. Getting clinics to try it is the hard part, and it's what I'm working on now.</p>
@@ -282,7 +282,7 @@ h1 { font-size: clamp(3rem, 7.2vw, 5.4rem); line-height: .98; margin-bottom: 24p
     </div>
     <div class="grid">
       <div><h3>Extraction pipeline</h3><p>Python that reads scanned well reports with Claude, corrects bottom-hole temperatures with the Horner method and calibrates per basin.</p></div>
-      <div><h3>Service and dashboard</h3><p>FastAPI, a Typer CLI and a React 19 dashboard, with PDF, GeoJSON and KML exports, on Cloud Run with Postgres.</p></div>
+      <div><h3>Service and field app</h3><p>FastAPI, a Typer CLI and a React 19 dashboard on Cloud Run with Postgres, plus a phone form for community water agents on AWS Lightsail, with Docker Compose and Caddy.</p></div>
       <div><h3>Tests</h3><p>450+ pytest tests, with lint and coverage in CI.</p></div>
     </div>
     <p class="status"><b>Where it stands:</b> a registered company in Brazil at the study stage, with no paying customer or pilot yet.</p>
@@ -318,8 +318,8 @@ h1 { font-size: clamp(3rem, 7.2vw, 5.4rem); line-height: .98; margin-bottom: 24p
       <div><b>Product</b><span>Next.js, React, Node.js, FastAPI, Tailwind</span></div>
       <div><b>Data</b><span>Firestore, PostgreSQL, Supabase, SQLite, pandas, NumPy, SciPy</span></div>
       <div><b>AI</b><span>OpenAI, Claude and Gemini APIs, Ollama, Claude Code, Codex</span></div>
-      <div><b>Payments</b><span>Stripe, WhatsApp through Z-API</span></div>
-      <div><b>Infrastructure</b><span>Vercel, Google Cloud Run, Firebase, Docker, GitHub Actions</span></div>
+      <div><b>Payments</b><span>Stripe, WhatsApp through Meta's Cloud API and Z-API</span></div>
+      <div><b>Infrastructure</b><span>AWS (EC2, Lightsail), Google Cloud Run, Firebase, Docker Compose, Caddy, GitHub Actions</span></div>
     </div>
     <p class="bg">I studied Production Engineering at UEPA for five semesters, which is where the math and physics come from, and left before finishing. Portuguese is my first language, and I speak English fluently.</p>
   </div>
